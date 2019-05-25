@@ -86,7 +86,7 @@ label airport:
     
     show zach normal orange
     
-    "Hmm... Which flight was Mica on..? Ah, it doesn't matter I'll just look around and I'll find him eventually... Probably..."
+    "Hmm... Which flight was Micah on..? Ah, it doesn't matter I'll just look around and I'll find him eventually... probably..."
     
     show zach shocked orange
     
@@ -182,7 +182,7 @@ label carSceneOne:
     show zach normal orange:
         xalign .25 yalign 1.0
     
-    mm "Who should we find next Zach?"
+    mm "Who should we find next, Zach?"
     
 menu:
     
@@ -243,7 +243,7 @@ menu:
         
         mm "Zach, I HATE pizza"
         
-        m "But... Papa johns is COOL"
+        m "But... Papa Johns is COOL"
         
         mm "Fine...."
         
@@ -269,6 +269,8 @@ menu:
     
 label scenePapaJohns:
     
+	play music "Go_To_Church.wav" fadein 2.0
+	
     scene bg papa_johns
     with dissolve
     
@@ -348,7 +350,7 @@ label scenePapaJohns:
     
     mm "I... I can't believe it..."
     
-    mm "The Great Christians might be..."
+    mm "The Good Christians might be..."
     
     m "DON'T SAY THAT!"
     
@@ -372,7 +374,7 @@ label scenePapaJohns:
     
     m "Thomas... There's a sign right there that says \"no smoking\""
     
-    t "Oh Shit, my bad brude."
+    t "Oh shit, my bad brude."
     
     mm "Anyways, how's it going Thomas, have you noticed anything odd lately?"
     
