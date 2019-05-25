@@ -1,30 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 27, in script call
-    m "zzz..."
-  File "renpy/common/00console.rpy", line 765, in script call
-    python in _console:
-  File "renpy/common/00start.rpy", line 120, in script
-    return
-Exception: Could not find return label (u'C:\\renpy\\The Good Christian Visual Novel/game/script.rpy', 1540666498, 14).
+  File "renpy/common/00start.rpy", line 203, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 446, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 446, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 456, in _execute_python_hide
+    renpy.load("_reload-2")
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 27, in script call
-    m "zzz..."
-  File "renpy/common/00console.rpy", line 765, in script call
-    python in _console:
-  File "renpy/common/00start.rpy", line 120, in script
-    return
-  File "C:\renpy\renpy-6.99.14.3-sdk\renpy\ast.py", line 1468, in execute
-    next_node(renpy.game.context().lookup_return(pop=True))
-  File "C:\renpy\renpy-6.99.14.3-sdk\renpy\execution.py", line 664, in lookup_return
-    raise Exception("Could not find return label {!r}.".format(self.return_stack[-1]))
-Exception: Could not find return label (u'C:\\renpy\\The Good Christian Visual Novel/game/script.rpy', 1540666498, 14).
+  File "renpy/common/00start.rpy", line 203, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 446, in script
+    python hide:
+  File "C:\renpy\renpy-6.99.14.3-sdk\renpy\ast.py", line 882, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\renpy\renpy-6.99.14.3-sdk\renpy\python.py", line 1913, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/00keymap.rpy", line 446, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 456, in _execute_python_hide
+    renpy.load("_reload-2")
+  File "C:\renpy\renpy-6.99.14.3-sdk\renpy\loadsave.py", line 730, in load
+    log.unfreeze(roots, label="_after_load")
+  File "C:\renpy\renpy-6.99.14.3-sdk\renpy\python.py", line 1868, in unfreeze
+    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
+  File "C:\renpy\renpy-6.99.14.3-sdk\renpy\python.py", line 1696, in rollback
+    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
 
 Windows-8-6.2.9200
 Ren'Py 7.1.1.929
 The Good Christian Visual Novel 1.0
-Sat Oct 27 13:57:21 2018
+Sat May 25 01:51:25 2019

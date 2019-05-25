@@ -274,7 +274,7 @@ menu:
     
 label scenePapaJohns:
     
-    play music "Go_To_Church.wav" fadein 2.0
+    play music "supermonkey.mp3" fadein 2.0
 
     scene bg papa_johns
     with dissolve
@@ -391,7 +391,7 @@ label scenePapaJohns:
     
 label sceneDePaulSeijiMeetUp:
 
-    stop music
+    stop music #Find some sound to put here cuz it's weird for just silence at this part
 
     scene bg depaul
     with dissolve
@@ -413,7 +413,7 @@ label sceneDePaulSeijiMeetUp:
     
     t "Zach, that doesn't make any sense! Why would the front desk person know anything about Seiji's whereabouts?"
     
-    m "Thomas, that's not a growth mindset, trust me, it will work!"
+    m "Thomas, that's not a growth mindset, trust me, it'll work!"
     
     scene bg depaul_front_desk
     with hpunch
@@ -451,6 +451,8 @@ label sceneDePaulSeijiMeetUp:
     fdl "Thank you, have a nice day!"
     
     "The front desk lady hands Thomas Seiji's exact coordinates on google maps"
+    
+    hide frontdeskwoman normal stand
     
     show thomas normal casual: 
         xalign .85 yalign 1.0
