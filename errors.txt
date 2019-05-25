@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 353: expected statement.
+    Scene bg papa_johns
+                       ^
+
+Ren'Py Version: Ren'Py 7.1.1.929
+Sat Oct 27 13:20:45 2018
