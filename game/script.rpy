@@ -4,6 +4,7 @@ define pm = Character("Pretzel Woman", color="#800080")
 define mm = Character("Micah", color="#ff4c4c")
 define rp = Character("Reporter", color="#00c5ff")
 define t = Character("Thomas", color="#1a8b27")
+define fdl = Character("Front Desk Lady", color="#800080")
 default micaClout = 0
 default pickMitchell = False
 default pickSeiji = False
@@ -237,7 +238,7 @@ menu:
     
     "Papa John's":
         
-        $micaClout = micaClout - 1
+        $micaClout = micaClout + 1
         
         m "How about we go to PAPA JOHNNNS"
         
@@ -251,9 +252,13 @@ menu:
         
     "Subway":
         
+        $micaClout = micaClout - 1
+        
         m "How about we go to Subway?"
         
-        mm "Hmm.. Okay sure."
+        mm "You know... I don't really wanna order anything at Subway"
+        
+        m "Alright, suit yourself buddy"
         
         return ##placeholder
         
@@ -269,8 +274,8 @@ menu:
     
 label scenePapaJohns:
     
-	play music "Go_To_Church.wav" fadein 2.0
-	
+    play music "Go_To_Church.wav" fadein 2.0
+
     scene bg papa_johns
     with dissolve
     
@@ -382,7 +387,94 @@ label scenePapaJohns:
     
     m "Hmm... This isn't good. Let's go to DePaul to see if he's there."
     
-    return ##placeholder, do other restaurant options first
+    jump sceneDePaulSeijiMeetUp
+    
+label sceneDePaulSeijiMeetUp:
+
+    stop music
+
+    scene bg depaul
+    with dissolve
+
+    show zach normal orange:
+        xalign .25 yalign 1.0
+    
+    show mica normal casual:
+        xalign .75 yalign 1.0
+    
+    m "Let's ask the front desk person if they know where Seiji is!"
+    
+    mm "As long as you're the one asking"
+    
+    hide mica normal casual
+    
+    show thomas normal casual:
+        xalign .75 yalign 1.0
+    
+    t "Zach, that doesn't make any sense! Why would the front desk person know anything about Seiji's whereabouts?"
+    
+    m "Thomas, that's not a growth mindset, trust me, it will work!"
+    
+    scene bg depaul_front_desk
+    with hpunch
+    
+    play music "Crowd_Talking.wav"
+    
+    show zach normal orange:
+        xalign .1 yalign 1.0
+        
+    show frontdeskwoman normal stand:
+        xalign .85 yalign 1.0
+        
+    show mica normal casual:
+        xalign .5 yalign 1.0
+    
+    fdl "Hello! Welcome to DePaul University, how can I help you?"
+    
+    m "TELL ME WHERE MR. HAMADA IS"
+    
+    fdl "Ok. That will be 18 Robucks!"
+    
+    m "Uhh.... Do you accept McDonalds Gift Cards??"
+    
+    fdl "No, sorry, we only accept Robucks and Murder Miners Steam Keys"
+    
+    hide mica normal casual
+    
+    show thomas normal casual:
+        xalign .5 yalign 1.0
+    
+    t "Don't worry guys, I've got this"
+    
+    "Thomas hands the front desk lady 18 Murder Miners Steam Keys"
+    
+    fdl "Thank you, have a nice day!"
+    
+    "The front desk lady hands Thomas Seiji's exact coordinates on google maps"
+    
+    show thomas normal casual: 
+        xalign .85 yalign 1.0
+    
+    show mica normal casual:
+        xalign .5 yalign 1.0
+    
+    m "Thank god you bought the Murder Miners 50 Friend pack Thomas!"
+    
+    mm "An absolute mastermind at work"
+    
+    t "Don't mention it guys, I got you!"
+    
+    m "Hmm... It looks as if Seiji is still at the McDonalds you were talking about, Thomas"
+    
+    mm "Maybe he's in the PlayPlace™!!"
+    
+    m "MICAH YOU'RE A GENIUS!"
+    
+    m "Ok guys, we know he's at the PlayPlace™ so let's just go find William"
+    
+    t "What?? That doesn't make any sense, we don't know that!!"
+    
+    m "No one cares Thomas, we're finding William now!!"
     
 return
 
