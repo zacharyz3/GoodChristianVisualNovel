@@ -1,0 +1,1 @@
+This is the Good Christian Video Novel, it is built using Ren.py and you gotta get it to build
