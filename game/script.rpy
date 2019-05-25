@@ -429,7 +429,7 @@ label sceneDePaulSeijiMeetUp:
     show mica normal casual:
         xalign .5 yalign 1.0
     
-    fdl "Hello! Welcome to DePaul University, how can I help you?"
+    fdl "Hello! Welcome to DePaul University, how can I help you?" ## add a bell before this cuz rob put a bell 
     
     m "TELL ME WHERE MR. HAMADA IS"
     
