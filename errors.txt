@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 425: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    xalign .75 yalign 1.0
-    ^
+File "game/script.rpy", line 488: end of line expected.
+    with fadein 1.0
+                ^
 
 Ren'Py Version: Ren'Py 7.1.1.929
-Sat May 25 01:15:24 2019
+Sat May 25 12:56:30 2019

@@ -5,6 +5,7 @@ define mm = Character("Micah", color="#ff4c4c")
 define rp = Character("Reporter", color="#00c5ff")
 define t = Character("Thomas", color="#1a8b27")
 define fdl = Character("Front Desk Lady", color="#800080")
+define ss = Character("Samson", color="#000000")
 default micaClout = 0
 default pickMitchell = False
 default pickSeiji = False
@@ -477,6 +478,47 @@ label sceneDePaulSeijiMeetUp:
     t "What?? That doesn't make any sense, we don't know that!!"
     
     m "No one cares Thomas, we're finding William now!!"
+    
+    "The gang decides to head to William's house"
+    
+    scene bg samson1
+    with fade
+    
+    play music "Butchers(SilentPartner).wav" fadein 1.0
+    
+    ss "Ahh, yes! I've located my master!"
+    
+    ss "Who are these evil doers that he's communicating with? Looks like they're up to no good, I better lay down low for a while"
+    
+    ## put up background depaul and show thomas and samson on screen
+    
+    scene bg depaul
+    
+    show thomas shocked casual:
+        xalign .25 yalign 1.0
+    
+    show samson normal standing:
+        xalign .75 yalign 1.0
+    
+    t "SAMSON IS THAT YOU?!"
+    
+    ##have samson's model jump twice after playing bark bark sound effect
+    
+    show samson normal standing:
+       linear .1 yalign .8
+       linear .1 yalign 1.0
+       linear .1 yalign .8
+       linear .1 yalign 1.0
+    
+    ss "Bark! Bark!"
+    
+    t "How did you get here?"
+    
+    m "Wow, Samson must have snuck in the back of your plane, the most logical explanation"
+    
+    t "Hmm.... I guess so..."
+    
+    ss "{i}That was a close one, I've got to be more careful{/i}"
     
 return
 
